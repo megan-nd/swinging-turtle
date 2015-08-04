@@ -2,6 +2,8 @@ import turtle
 t = turtle.Pen()
 
 def pendulum():
+    t.shape('turtle')
+    t.color('dark green')
     t.left(90)
     t.up()
     t.forward(100)
@@ -12,17 +14,17 @@ def pendulum():
     t.forward(150)
     t.right(90)
 
-def swing(m1,m2):
-    for x in range (1,5):
-        m1 = m1 - 2
-        m2 = m2 - 4
-        t.circle(-150,m1)
+def swing(m):
+    for x in range (1,23):
+        m = m - 8
+        t.circle(-150,m)
         t.right(180)
-        t.stamp()
-        t.circle(150,m2)
+        #t.stamp()
+        t.circle(150,m - 4)
         t.left(180)
-        t.stamp()
-
+        #t.stamp()
+    t.left(90)
+        
 pendulum()
-swing(180,180)
+swing(180)
 
